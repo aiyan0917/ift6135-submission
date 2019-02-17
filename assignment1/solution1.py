@@ -43,7 +43,7 @@ class MLP_NN(object):
         return z
 
     def import_data(self):
-        f = gzip.open('./mnist.pkl.gz')
+        f = gzip.open('./data/mnist.pkl.gz')
         data = pickle.load(f, encoding='latin1')
 
         train_data = np.array(data[0][0], dtype=float)
