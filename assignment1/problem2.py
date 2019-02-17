@@ -105,7 +105,7 @@ def test_on_validation(net, dataloader, print_acc=True):
 
 #%%
 def import_data():
-    f = gzip.open('./assignment1/data/mnist.pkl.gz')
+    f = gzip.open('./data/mnist.pkl.gz')
     data = pickle.load(f, encoding='latin1')
 
     train_data = np.array(data[0][0], dtype=float)
@@ -154,8 +154,8 @@ for i in range(len(train_correction_rate)):
     train_error_rate.append(1 - train_correction_rate[i])
     valid_error_rate.append(1 - valid_correction_rate[i])
 
-np.save("assignment1/problem2_train_error", np.array(train_error_rate))
-np.save("assignment1/problem2_valid_error", np.array(valid_error_rate))
+# np.save("assignment1/problem2_train_error", np.array(train_error_rate))
+# np.save("assignment1/problem2_valid_error", np.array(valid_error_rate))
 
 
 #%%
